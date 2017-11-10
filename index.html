@@ -5,7 +5,19 @@
 	<title>Document</title>
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css">
 	<style>
+		.nav-block {
+			position: relative;
+		}
+		img {
+			display: inline-block;
+			margin-right: auto;
+			padding: 20px;
+		}
 		ul {
+			display: inline-block;
+			position: absolute;
+			right: 10px;
+			top: 20px;
 			margin: 0;
 			padding: 0;
 		}
@@ -15,7 +27,7 @@
 		li {
 			display: inline-block;
 			font-size: 30px;
-			padding: 20px;
+			padding-left: 20px;
 		}
 		.burger-btn {
 			width: 50px;
@@ -23,6 +35,12 @@
 			border: 2px solid #000;
 			border-radius: 4px;
 			display: none;
+			position: absolute;
+			right: 10px;
+			top: 20px;
+		}
+		.div-h {
+			height: 100px;
 		}
 		@media screen and (max-width: 1024px) {
 			.burger-btn {
@@ -30,6 +48,13 @@
 			}
 			.burger-btn.active {
 				background-color: #ccc;
+			}
+
+			ul {
+				position: static;
+				width: 100%;
+				background-color: rgba(255, 0, 0, .3);
+
 			}
 			li {
 				display: block;
@@ -44,7 +69,10 @@
 	</style>
 </head>
 <body>
+<div class="div-h"></div>
 	<header>
+		<div class="nav-block">
+		<img src="logo.png" alt="Logotype">
 		<div class="burger-btn"></div>
 		<nav>
 			<ul>
@@ -55,8 +83,9 @@
 				<li><a href="#">Nav 05</a></li>
 			</ul>
 		</nav>
+		</div>
 	</header>
-	<h1>content</h1>
+	<h1>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vitae nostrum officiis dolor itaque, veritatis in animi expedita debitis omnis fugiat incidunt harum amet neque, mollitia quia nam eligendi, ab! Dolorem excepturi harum animi tenetur, magni odit. Modi unde molestiae provident deleniti beatae iusto, commodi, aut a, maxime sed eius distinctio.</h1>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 	<script src="index.js"></script>
 </body>
